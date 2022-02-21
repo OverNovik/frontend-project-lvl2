@@ -1,6 +1,8 @@
 import { readFileSync } from 'fs';
 import path from 'path';
-import { sortBy, has, isEqual } from 'lodash';
+import pkg from 'lodash';
+
+const { sortBy, has, isEqual } = pkg;
 
 const readFile = (filepath) => JSON.parse(readFileSync(path.resolve(process.cwd(), filepath.trim()), 'utf-8'));
 
