@@ -56,12 +56,10 @@ const genDiff = (filepath1, filepath2) => {
   }, []);
 
   const visual = diff.map((item) => ` ${item.key}: ${item.value}`);
-  const spaces = `{\n${visual.join('\n')}\n}`;
-  // console.log(file1);
-  // console.log(file2);
-  // console.log(filesKeys);
-  console.log(spaces);
-  return spaces;
+  const result = `{\n${visual.join('\n')}\n}`;
+
+  console.log(result);
+  return result;
 };
 
 export default genDiff;
