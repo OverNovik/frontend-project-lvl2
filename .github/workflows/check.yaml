@@ -14,6 +14,8 @@ jobs:
       - name: install
         run: |
           make install
+        env:
+          CI: true
       - name: Run test
         run: |
           make test
@@ -21,12 +23,12 @@ jobs:
         run: |
           make lint
       - name: Test & publish code coverage
-      #   # Publish code coverage on Code Climate
-      #   # https://github.com/paambaati/codeclimate-action
-      uses: paambaati/codeclimate-action@v3
-      #   # Add Code Climate secret key
-      env:
-        CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
-      with:
-        coverageCommand: make test-coverage
-        debug: true
+        #   # Publish code coverage on Code Climate
+        #   # https://github.com/paambaati/codeclimate-action
+        uses: paambaati/codeclimate-action@v3
+        #   # Add Code Climate secret key
+        env:
+          CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
+        with:
+          coverageCommand: make test-coverage
+          debug: true
