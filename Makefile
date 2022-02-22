@@ -14,3 +14,6 @@ link:
 
 test:
 	npx jest
+
+test-coverage:
+	make npx jest --coverage
