@@ -7,7 +7,7 @@ publish:
 	npm publish --dry-run
 
 lint:
-	npx eslint . --fix
+	npx eslint .
 
 link:
 	npm link
