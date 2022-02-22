@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/OverNovik/frontend-project-lvl2#readme",
   "dependencies": {
+    "@jest/globals": "^27.5.1",
     "commander": "^9.0.0",
     "lodash": "^4.17.21"
   },

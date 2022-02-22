@@ -11,3 +11,6 @@ lint:
 
 link:
 	npm link
+
+test:
+	npx jest

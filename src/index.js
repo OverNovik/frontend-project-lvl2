@@ -61,6 +61,7 @@ const genDiff = (filepath1, filepath2) => {
   // console.log(file2);
   // console.log(filesKeys);
   console.log(spaces);
+  return spaces;
 };
 
 export default genDiff;
