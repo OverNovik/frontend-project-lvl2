@@ -1,14 +1,15 @@
 import { readFileSync } from 'fs';
 import path from 'path';
 import pkg from 'lodash';
+import parser from './parser.js';
 
 const { sortBy, has, isEqual } = pkg;
 
-const readFile = (filepath) => JSON.parse(readFileSync(path.resolve(process.cwd(), filepath.trim()), 'utf-8'));
+const readFile = (filepath) => readFileSync(path.resolve(process.cwd(), filepath.trim()), 'utf-8');
 
 const genDiff = (filepath1, filepath2) => {
-  const file1 = readFile(filepath1);
-  const file2 = readFile(filepath2);
+  const file1 = parser(readFile(filepath1), path.extname(filepath1));
+  const file2 = parser(readFile(filepath2), path.extname(filepath2));
   const filesKeys = sortBy(Object.keys({ ...file1, ...file2 }));
 
   const diff = filesKeys.reduce((acc, key) => {
