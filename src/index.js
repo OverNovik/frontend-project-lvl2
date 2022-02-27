@@ -13,7 +13,7 @@ const genDiff = (filepath1, filepath2, formatName = 'stylish') => {
   const diff = findDiff(file1, file2);
   const result = formatters(formatName, diff);
 
-  console.log(diff);
+  console.log(result);
   return result;
 };
 
