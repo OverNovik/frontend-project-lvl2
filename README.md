@@ -16,3 +16,7 @@
 ### Recursive comparison (YAML/YAML, JSON/JSON, JSON/YAML)
 
 [![asciicast](https://asciinema.org/a/8qznih7X6kMq961mcz7tebKwU.svg)](https://asciinema.org/a/8qznih7X6kMq961mcz7tebKwU)
+
+### Plain format
+
+[![asciicast](https://asciinema.org/a/Ho9JdjOiEHuGXtMVw7DQH6k4K.svg)](https://asciinema.org/a/Ho9JdjOiEHuGXtMVw7DQH6k4K)
