@@ -13,7 +13,7 @@ link:
 	npm link
 
 test:
-	npx jest
+	npm test
 
 test-coverage:
 	npx -n '--experimental-vm-modules  --no-warnings' jest --coverage
