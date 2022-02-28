@@ -3,21 +3,19 @@ import plain from './plain.js';
 import stylish from './stylish.js';
 
 const format = (formatName, diff) => {
-  let formatter;
-
   if (formatName === 'stylish') {
-    formatter = stylish(diff);
+    return stylish(diff);
   }
 
   if (formatName === 'plain') {
-    formatter = plain(diff);
+    return plain(diff);
   }
 
   if (formatName === 'json') {
-    formatter = json(diff);
+    return json(diff);
   }
 
-  return formatter;
+  return stylish(diff);
 };
 
 export default format;

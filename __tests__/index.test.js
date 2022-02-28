@@ -1,6 +1,6 @@
 import { fileURLToPath } from 'url';
 import path, { dirname } from 'path';
-import { beforeEach, expect, test } from '@jest/globals';
+import { expect, test } from '@jest/globals';
 import genDiff from '../src/index.js';
 
 const __filename = fileURLToPath(import.meta.url);
