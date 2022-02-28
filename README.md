@@ -20,3 +20,7 @@
 ### Plain format
 
 [![asciicast](https://asciinema.org/a/Ho9JdjOiEHuGXtMVw7DQH6k4K.svg)](https://asciinema.org/a/Ho9JdjOiEHuGXtMVw7DQH6k4K)
+
+### output to JSON
+
+[![asciicast](https://asciinema.org/a/bcZupeXpuW9zMPaFUkqppuDnI.svg)](https://asciinema.org/a/bcZupeXpuW9zMPaFUkqppuDnI)
