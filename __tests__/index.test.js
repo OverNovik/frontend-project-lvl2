@@ -5,10 +5,6 @@ import genDiff from '../src/index.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
-let filepath1;
-let filepath2;
-let filepath1Yaml;
-let filepath2Yaml;
 
 const correctOutputStylishFormat = '{\n'
 + '    common: {\n'
@@ -67,25 +63,26 @@ const correctOutputPlainFormat = "Property 'common.follow' was added with value:
 + "Property 'group2' was removed\n"
 + "Property 'group3' was added with value: [complex value]";
 
-beforeEach(() => {
-  filepath1 = path.join(__dirname, '../', '__fixtures__/file1.json');
-  filepath2 = path.join(__dirname, '../', '__fixtures__/file2.json');
-  filepath1Yaml = path.join(__dirname, '../', '__fixtures__/file1.yaml');
-  filepath2Yaml = path.join(__dirname, '../', '__fixtures__/file2.yaml');
-});
-
 test('test genDiff function with stylish format (JSON)', () => {
+  const filepath1 = path.join(__dirname, '../', '__fixtures__/file1.json');
+  const filepath2 = path.join(__dirname, '../', '__fixtures__/file2.json');
   expect(genDiff(filepath1, filepath2)).toBe(correctOutputStylishFormat);
 });
 
 test('test genDiff function with stylish format (YAML)', () => {
+  const filepath1Yaml = path.join(__dirname, '../', '__fixtures__/file1.yaml');
+  const filepath2Yaml = path.join(__dirname, '../', '__fixtures__/file2.yaml');
   expect(genDiff(filepath1Yaml, filepath2Yaml)).toBe(correctOutputStylishFormat);
 });
 
 test('test genDiff function with plain format (JSON)', () => {
+  const filepath1 = path.join(__dirname, '../', '__fixtures__/file1.json');
+  const filepath2 = path.join(__dirname, '../', '__fixtures__/file2.json');
   expect(genDiff(filepath1, filepath2, 'plain')).toBe(correctOutputPlainFormat);
 });
 
 test('test genDiff function with plain format (YAML)', () => {
+  const filepath1Yaml = path.join(__dirname, '../', '__fixtures__/file1.yaml');
+  const filepath2Yaml = path.join(__dirname, '../', '__fixtures__/file2.yaml');
   expect(genDiff(filepath1Yaml, filepath2Yaml, 'plain')).toBe(correctOutputPlainFormat);
 });
