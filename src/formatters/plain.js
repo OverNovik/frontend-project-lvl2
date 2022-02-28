@@ -3,12 +3,12 @@ import pkg from 'lodash';
 const { isObject, isString } = pkg;
 
 const transform = (value) => {
-  if (!isObject(value)) {
-    return value;
+  if (isString(value)) {
+    return `'${value}'`;
   }
 
-  if (isString(value)) {
-    return `${value}`;
+  if (!isObject(value)) {
+    return value;
   }
 
   return '[complex value]';
@@ -31,15 +31,15 @@ const plain = (diff) => {
     }
 
     if (item.diffState === 'children') {
-      result = `${iterArr(item.children, `${path + item.key}`)}`;
+      result = `${iterArr(item.children, `${path + item.key}.`)}`;
     }
 
     if (item.diffState === 'withoutChanges') {
-      result = '';
+      return null;
     }
 
-    return result.join('\n');
-  });
+    return result;
+  }).filter((item) => item).join('\n');
 
   return iterArr(diff, '');
 };

@@ -1,18 +1,18 @@
 import plain from './plain.js';
 import stylish from './stylish.js';
 
-const formatters = (formatName, diff) => {
-  let format;
+const format = (formatName, diff) => {
+  let formatter;
 
   if (formatName === 'stylish') {
-    format = stylish(diff);
+    formatter = stylish(diff);
   }
 
   if (formatName === 'plain') {
-    format = plain(diff);
+    formatter = plain(diff);
   }
 
-  return format;
+  return formatter;
 };
 
-export default formatters;
+export default format;
