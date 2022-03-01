@@ -63,25 +63,25 @@ const correctOutputPlainFormat = "Property 'common.follow' was added with value:
 + "Property 'group2' was removed\n"
 + "Property 'group3' was added with value: [complex value]";
 
-test('test genDiff function with stylish format (JSON)', () => {
+test('genDiff test with stylish format (JSON)', () => {
   const filepath1 = path.join(__dirname, '../', '__fixtures__/file1.json');
   const filepath2 = path.join(__dirname, '../', '__fixtures__/file2.json');
   expect(genDiff(filepath1, filepath2)).toBe(correctOutputStylishFormat);
 });
 
-test('test genDiff function with stylish format (YAML)', () => {
+test('genDiff test  function with stylish format (YAML)', () => {
   const filepath1Yaml = path.join(__dirname, '../', '__fixtures__/file1.yaml');
   const filepath2Yaml = path.join(__dirname, '../', '__fixtures__/file2.yaml');
   expect(genDiff(filepath1Yaml, filepath2Yaml)).toBe(correctOutputStylishFormat);
 });
 
-test('test genDiff function with plain format (JSON)', () => {
+test('genDiff test with plain format (JSON)', () => {
   const filepath1 = path.join(__dirname, '../', '__fixtures__/file1.json');
   const filepath2 = path.join(__dirname, '../', '__fixtures__/file2.json');
   expect(genDiff(filepath1, filepath2, 'plain')).toBe(correctOutputPlainFormat);
 });
 
-test('test genDiff function with plain format (YAML)', () => {
+test('genDiff test function with plain format (YAML)', () => {
   const filepath1Yaml = path.join(__dirname, '../', '__fixtures__/file1.yaml');
   const filepath2Yaml = path.join(__dirname, '../', '__fixtures__/file2.yaml');
   expect(genDiff(filepath1Yaml, filepath2Yaml, 'plain')).toBe(correctOutputPlainFormat);
